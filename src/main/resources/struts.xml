@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+"-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+"http://struts.apache.org/dtds/struts-2.0.dtd">
+ 
+<struts>
+
+ 	<constant name="struts.devMode" value="true" />
+	
+	<package name="default" namespace="/" extends="json-default">
+        	<action name="Product" class="com.app.food.action.GetFoodInformation">
+     	 	<!-- <result type="json" /> --> 
+     		  <result name="success" type="json">
+            <param name="root">json</param>
+        </result> 
+     	</action>
+     	<action name="Keyword" class="com.app.food.action.GetFoodKeywordInformation">
+     	 	<!-- <result type="json" /> --> 
+     		  <result name="success" type="json">
+            <param name="root">jsonArray</param>
+        </result> 
+     	</action>
+     	<action name="ProductId" class="com.app.food.action.GetFoodInformationproductId">
+     	 	<!-- <result type="json" /> --> 
+     		  <result name="success" type="json">
+            <param name="root">json</param>
+        </result> 
+     	</action>
+     	<action name="Ingredients" class="com.app.food.action.GetFoodInformationIngredients">
+     	 	<!-- <result type="json" /> --> 
+     		  <result name="success" type="json">
+            <param name="root">json</param>
+        </result> 
+     	</action>
+     	
+     	
+     	
+  	</package>
+	
+</struts>
